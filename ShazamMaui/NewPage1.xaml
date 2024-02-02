@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShazamMaui.NewPage1"
+             Title="Library">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="End" Padding="10">
+            <ImageButton Source="settings.png" Aspect="AspectFill" HeightRequest="35" WidthRequest="35"></ImageButton>
+            <Label Text="Settings" FontSize="Large" TextColor="White" VerticalTextAlignment="Center"></Label>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Welcome to .NET MAUI!" FontSize="Large" TextColor="Black" HorizontalOptions="Center"></Label>
+        </StackLayout>
+
+        <Button Grid.Row="1" Text="Click Me" BackgroundColor="#3498DB" TextColor="White" FontSize="Large" CornerRadius="0" />
+    </Grid>
+</ContentPage>

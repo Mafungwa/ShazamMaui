@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShazamMaui.MainPage">
+            
+
+    <StackLayout Orientation="Vertical" BackgroundColor= "#029aff">
+        <StackLayout Orientation="Horizontal">
+
+            <StackLayout Orientation="Vertical" Padding="15,10,0,0" >
+                <ImageButton Source="library.png" Aspect="AspectFill" HeightRequest="35" WidthRequest="35" Clicked="ImageButton_Clicked"></ImageButton>
+                <Label Text="Library" FontSize="Large" TextColor="White"></Label>
+            </StackLayout>            
+
+            <CarouselView
+                IndicatorView="indicatorView"
+                Grid.Row="3"                
+                ItemsSource="{Binding Charts}"
+                PeekAreaInsets="30">               
+                
+            </CarouselView>
+
+            <IndicatorView
+                x:Name="indicatorView"
+                Grid.Row="3"
+                HorizontalOptions="Center"
+                IndicatorColor="#616161"
+                IndicatorSize="8"
+                SelectedIndicatorColor="White"
+                VerticalOptions="Center" />
+
+            <StackLayout HorizontalOptions="EndAndExpand" Padding="0,10,30,0">
+                <ImageButton Source="charts" HorizontalOptions="EndAndExpand"  Aspect="AspectFill" HeightRequest="35" WidthRequest="35" Clicked="ImageButton_Clicked_1"></ImageButton>
+                     
+                <Label Text="Charts" FontSize="Large" TextColor="White"></Label>
+            </StackLayout>
+            
+            
+
+        </StackLayout>
+
+        <Label Text="Tap To Shazaam" Margin="0,140,0,0" FontSize="Large" TextColor="White" HorizontalOptions="Center">
+        </Label>
+        <Image x:Name="TapToShazamName" Source="taptoshazam.jpeg" Aspect="AspectFill"  HeightRequest="150" WidthRequest="150" Margin="0,50,0,0" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                </Image.GestureRecognizers>
+            </Image>                 
+
+        
+        <SearchBar Text=""  HorizontalOptions="CenterAndExpand"  BackgroundColor="White" Margin="0,50,0,0"></SearchBar>
+        <TableView IsVisible="True" ></TableView>
+
+    </StackLayout>
+    
+    
+    
+    
+
+</ContentPage>
